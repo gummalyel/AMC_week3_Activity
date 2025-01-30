@@ -3,14 +3,14 @@ import {StyleSheet, TextInput} from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
 const TextInputExample = () => {
-  const [name, onChangeTextName] = React.useState('Name: ');
-  const [age, onChangeTextAge] = React.useState('Age: ');
+  const [name, onChangeName] = React.useState('Name: ');
+  const [age, onChangeAge] = React.useState('Age: ');
   const [address, onChangeAddress] = React.useState('Address: ');
   const [school, onChangeSchool] = React.useState('School: ');
   const [course, onChangeCourse] = React.useState('Course: ');
   const [email, onChangeEmail] = React.useState('Email: ');
   const [number, onChangeContact] = React.useState('Contact Number: ');
-  const [value, onChangeText] = React.useState('About Me: ');
+  const [value, onChangeAboutMe] = React.useState('About Me: ');
   
   return (
     <SafeAreaProvider>
@@ -23,12 +23,12 @@ const TextInputExample = () => {
         ]}>
         <TextInput
           style={styles.input}
-          onChangeText={onChangeTextName}
+          onChangeText={onChangeName}
           value={name}
         />
         <TextInput
           style={styles.input}
-          onChangeText={onChangeTextAge}
+          onChangeText={onChangeAge}
           value={age}
         />
         <TextInput
@@ -61,7 +61,7 @@ const TextInputExample = () => {
           multiline
           numberOfLines={4}
           maxLength={40}
-          onChangeText={text => onChangeText(text)}
+          onChangeText={text => onChangeAboutMe(text)}
           value={value}
           style={styles.textInput}
         />
