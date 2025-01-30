@@ -10,7 +10,7 @@ const TextInputExample = () => {
   const [course, onChangeCourse] = React.useState('Course: ');
   const [email, onChangeEmail] = React.useState('Email: ');
   const [number, onChangeContact] = React.useState('Contact Number: ');
-  const [value, onChangeText] = React.useState('About ME: ');
+  const [value, onChangeText] = React.useState('About Me: ');
   
   return (
     <SafeAreaProvider>
